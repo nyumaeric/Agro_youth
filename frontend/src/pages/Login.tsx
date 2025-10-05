@@ -32,7 +32,7 @@ const Login: React.FC = () => {
         <div className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="text-4xl">🌾</span>
-            <h1 className="text-2xl font-bold text-gradient">D'Agri Talk</h1>
+            <h1 className="text-2xl font-bold text-gradient">AgroYouth</h1>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Welcome back!
@@ -108,7 +108,7 @@ const Login: React.FC = () => {
         {/* Demo Info */}
         <div className="text-center">
           <p className="text-sm text-gray-500">
-            New to D'Agri Talk?{' '}
+            New to AgroYouth?{' '}
             <Link
               to="/"
               className="text-primary-600 hover:text-primary-700 transition-colors"

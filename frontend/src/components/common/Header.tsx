@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-200"
           >
             <span className="text-3xl">🌾</span>
-            <span>D'Agri Talk</span>
+            <span>AgroYouth</span>
           </Link>
 
           {/* Desktop Navigation */}

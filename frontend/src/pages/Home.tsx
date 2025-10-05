@@ -45,7 +45,7 @@ const Home: React.FC = () => {
             <div className="animate-fade-in">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Welcome to{' '}
-                <span className="text-gradient">D'Agri Talk</span>
+                <span className="text-gradient">AgroYouth</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 mb-4 font-serif">
                 Traditional Agricultural Knowledge Platform for Liberia
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 text-2xl font-bold mb-4">
               <span className="text-3xl">🌾</span>
-              <span>D'Agri Talk</span>
+              <span>AgroYouth</span>
             </div>
             <p className="text-gray-400 mb-8">
               Connecting Liberian farmers with knowledge, markets, and community

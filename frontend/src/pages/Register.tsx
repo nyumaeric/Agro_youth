@@ -62,7 +62,7 @@ const Register: React.FC = () => {
         <div className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="text-4xl">🌾</span>
-            <h1 className="text-2xl font-bold text-gradient">D'Agri Talk</h1>
+            <h1 className="text-2xl font-bold text-gradient">AgroYouth</h1>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Join Our Community
