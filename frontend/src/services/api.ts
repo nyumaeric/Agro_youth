@@ -1,14 +1,14 @@
-import axios, { AxiosRequestConfig, AxiosError } from 'axios';
-import { User, KnowledgeEntry, MarketListing } from '../types';
+import axios, { InternalAxiosRequestConfig, AxiosError } from 'axios';
+import { KnowledgeEntry, MarketListing, User } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
 });
 
 // Add token to requests
-api.interceptors.request.use((config) => {
+api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   const token = localStorage.getItem('access_token');
   if (token) {
     config.headers = config.headers || {};

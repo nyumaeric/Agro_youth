@@ -9,31 +9,31 @@ const Home: React.FC = () => {
     {
       icon: '🌾',
       title: 'Traditional Knowledge',
-      description: 'Preserve and share ancestral farming wisdom from Liberian elders and experienced farmers. Learn time-tested techniques for sustainable agriculture.',
+      description: 'Explore and preserve Liberia’s ancestral farming wisdom while learning modern, sustainable practices. AgroYouth bridges tradition and innovation to empower youth in agriculture..',
       link: '/knowledge',
-      stats: '500+ Traditional Practices'
+      stats: '50+ Traditional & Digital Learning Resources'
     },
     {
       icon: '🛒',
       title: 'Market Connection',
-      description: 'Connect farmers directly with buyers and access real-time market prices for your crops. Sell your harvest at fair prices.',
+      description: 'Empower young farmers to connect with buyers, access fair markets, and sell their produce digitally. Gain real-time insights to make smarter business decisions.',
       link: '/market',
-      stats: '1000+ Active Listings'
+      stats: '100+ Youth-Led Agri Businesses'
     },
     {
       icon: '🤝',
       title: 'Community Support',
-      description: 'Learn from fellow farmers and experts through our community platform. Get advice, share experiences, and grow together.',
+      description: 'Join a growing digital community of young farmers and mentors. Share ideas, access expert guidance, and grow your farming career together.',
       link: token ? '/knowledge' : '/register',
-      stats: '2500+ Community Members'
+      stats: '2500+ Active AgroYouth Members'
     }
   ];
 
   const stats = [
-    { number: '2,500+', label: 'Farmers Connected' },
-    { number: '500+', label: 'Knowledge Entries' },
-    { number: '1,000+', label: 'Market Listings' },
-    { number: '50+', label: 'Communities Served' },
+    { number: '2,500+', label: 'Young Farmers Empowered' },
+    { number: '500+', label: 'Digital Learning Resources' },
+    { number: '1,000+', label: 'Agri-Market Opportunities' },
+    { number: '50+', label: 'Local Communities Impacted' },
   ];
 
   return (
@@ -48,11 +48,11 @@ const Home: React.FC = () => {
                 <span className="text-gradient">AgroYouth</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 mb-4 font-serif">
-                Traditional Agricultural Knowledge Platform for Liberia
+                Empowering the Next Generation of Liberian Farmers
               </p>
               <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                Connecting farmers, preserving wisdom, building communities. 
-                Join thousands of farmers sharing knowledge and growing together.
+                Learn, connect, and grow with digital agricultural knowledge designed for youth.
+               Join a vibrant community of young farmers transforming agriculture through technology.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -112,11 +112,10 @@ const Home: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Empowering Liberian Agriculture
+              Empowering the Next Generation of Liberian Farmers
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover powerful tools designed specifically for Liberian farmers 
-              to preserve traditions, access markets, and build stronger communities.
+             Discover digital tools and resources designed to help young Liberian farmers learn modern techniques, preserve traditional knowledge, access markets, and build stronger farming communities.
             </p>
           </div>
           
@@ -157,11 +156,10 @@ const Home: React.FC = () => {
         <div className="container-custom text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Join Our Growing Community?
+              Ready to Empower Your Farming Journey?
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Connect with fellow farmers, share your knowledge, and access the marketplace. 
-              It's free to get started!
+              Join AgroYouth to learn, connect, and grow. Share your farming experiences, access learning resources, and explore market opportunities — all in one platform.
             </p>
             
             {!token && (
@@ -191,22 +189,22 @@ const Home: React.FC = () => {
               <span>AgroYouth</span>
             </div>
             <p className="text-gray-400 mb-8">
-              Connecting Liberian farmers with knowledge, markets, and community
+              Empowering young Liberian farmers through digital learning, market access, and community collaboration
             </p>
             <div className="flex justify-center space-x-8 text-sm">
               <Link to="/knowledge" className="text-gray-400 hover:text-white transition-colors">
-                Knowledge Hub
+               Learning Hub
               </Link>
               <Link to="/market" className="text-gray-400 hover:text-white transition-colors">
-                Marketplace
+                Market Access
               </Link>
               {!token && (
                 <>
                   <Link to="/login" className="text-gray-400 hover:text-white transition-colors">
-                    Login
+                    Sign In
                   </Link>
                   <Link to="/register" className="text-gray-400 hover:text-white transition-colors">
-                    Register
+                    Join
                   </Link>
                 </>
               )}

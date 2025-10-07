@@ -7,7 +7,13 @@ from app.extensions import jwt
 
 def create_app(config_name=os.getenv('FLASK_ENV', 'default')):
     app = Flask(__name__)
-    CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+    
+    # Configure CORS properly
+    CORS(app, 
+         resources={r"/api/*": {"origins": ["http://localhost:3000"]}}, 
+         supports_credentials=True,
+         allow_headers=["Content-Type", "Authorization"])
+    
     @app.before_request
     def log_request_info():
         print(f"Received {request.method} request to {request.path}")
