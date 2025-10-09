@@ -1,8 +1,9 @@
 # Agro Youth 
 
 Demo Video; https://www.loom.com/share/16c3748a27dd46c880737dfa7f5c8e5c?sid=0a4ea2f5-9f14-426a-bf40-4712c87dfc68
+Figma Link; https://www.figma.com/design/MLe3TzDbubFDHaSZDckYUW/Untitled?node-id=0-1&t=Y6L7EhqdSGUjvZzy-0
+Repo:
 
-Repo;
 
 A digital platform connecting young farmers, agricultural knowledge keepers, and buyers to facilitate knowledge sharing and agricultural commerce.
 
