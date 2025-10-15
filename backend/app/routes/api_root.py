@@ -9,7 +9,7 @@ def index():
         'version': '1.0',
         'endpoints': {
             'auth': '/api/auth',
-            'knowledge': '/api/knowledge',
+            'courses': '/api/courses',
             'market': '/api/market'
         }
     }), 200

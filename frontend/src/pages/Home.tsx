@@ -8,10 +8,10 @@ const Home: React.FC = () => {
   const features = [
     {
       icon: '🌾',
-      title: 'Traditional Knowledge',
-      description: 'Explore and preserve Liberia’s ancestral farming wisdom while learning modern, sustainable practices. AgroYouth bridges tradition and innovation to empower youth in agriculture..',
-      link: '/knowledge',
-      stats: '50+ Traditional & Digital Learning Resources'
+      title: 'Interactive Courses',
+      description: 'Access comprehensive agricultural courses designed for Liberian youth. Learn modern farming techniques, traditional practices, and business skills through hands-on interactive lessons.',
+      link: '/courses',
+      stats: '50+ Interactive Learning Courses'
     },
     {
       icon: '🛒',
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       icon: '🤝',
       title: 'Community Support',
       description: 'Join a growing digital community of young farmers and mentors. Share ideas, access expert guidance, and grow your farming career together.',
-      link: token ? '/knowledge' : '/register',
+      link: token ? '/courses' : '/register',
       stats: '2500+ Active AgroYouth Members'
     }
   ];
@@ -51,16 +51,16 @@ const Home: React.FC = () => {
                 Empowering the Next Generation of Liberian Farmers
               </p>
               <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                Learn, connect, and grow with digital agricultural knowledge designed for youth.
+                Learn, connect, and grow with digital agricultural courses designed for youth.
                Join a vibrant community of young farmers transforming agriculture through technology.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 {token ? (
                   <>
-                    <Link to="/knowledge">
+                    <Link to="/courses">
                       <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                        Explore Knowledge 📚
+                        Explore Courses 📚
                       </Button>
                     </Link>
                     <Link to="/market">
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
               Empowering the Next Generation of Liberian Farmers
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-             Discover digital tools and resources designed to help young Liberian farmers learn modern techniques, preserve traditional knowledge, access markets, and build stronger farming communities.
+             Discover digital tools and resources designed to help young Liberian farmers learn modern techniques, access interactive courses, build stronger farming communities, and connect with markets.
             </p>
           </div>
           
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
               Ready to Empower Your Farming Journey?
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Join AgroYouth to learn, connect, and grow. Share your farming experiences, access learning resources, and explore market opportunities — all in one platform.
+              Join AgroYouth to learn, connect, and grow. Take interactive courses, access learning resources, and explore market opportunities — all in one platform.
             </p>
             
             {!token && (
@@ -169,9 +169,9 @@ const Home: React.FC = () => {
                     Create Account
                   </Button>
                 </Link>
-                <Link to="/knowledge">
+                <Link to="/courses">
                   <Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-white hover:bg-white hover:text-primary-600">
-                    Explore Knowledge
+                    Explore Courses
                   </Button>
                 </Link>
               </div>
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
               Empowering young Liberian farmers through digital learning, market access, and community collaboration
             </p>
             <div className="flex justify-center space-x-8 text-sm">
-              <Link to="/knowledge" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/courses" className="text-gray-400 hover:text-white transition-colors">
                Learning Hub
               </Link>
               <Link to="/market" className="text-gray-400 hover:text-white transition-colors">

@@ -28,12 +28,12 @@ def create_app(config_name=os.getenv('FLASK_ENV', 'default')):
     
     # Register blueprints
     from app.routes.auth import auth_bp
-    from app.routes.knowledge import knowledge_bp
+    from app.routes.courses import courses_bp
     from app.routes.market import market_bp
     from app.routes.api_root import api_root_bp
     
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
-    app.register_blueprint(knowledge_bp, url_prefix='/api/knowledge')
+    app.register_blueprint(courses_bp, url_prefix='/api')
     app.register_blueprint(market_bp, url_prefix='/api/market')
     app.register_blueprint(api_root_bp, url_prefix='/api')
     

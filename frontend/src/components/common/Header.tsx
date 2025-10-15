@@ -16,8 +16,9 @@ const Header: React.FC = () => {
   const isActivePage = (path: string) => location.pathname === path;
 
   const navigationLinks = [
-    { path: '/knowledge', label: 'Knowledge', icon: '📚' },
+    { path: '/courses', label: 'Courses', icon: '📚' },
     { path: '/market', label: 'Market', icon: '🛒' },
+    { path: '/certificates', label: 'Certificates', icon: '🏆' },
   ];
 
   return (

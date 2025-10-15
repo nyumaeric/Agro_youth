@@ -23,12 +23,12 @@ Agro Youth is a full-stack web application designed to empower young farmers and
 - Secure JWT-based authentication
 - User profiles with location and contact information
 
-### Knowledge Base
-- Create and browse agricultural knowledge entries
-- Filter by crop type, season, and region
-- Multi-language content support
-- Contributions from experienced farmers and elders
-- Best practices, traditional wisdom, and modern techniques
+### Interactive Learning Courses
+- Access comprehensive agricultural courses designed for youth
+- Learn modern farming techniques and traditional practices
+- Progress tracking with certificates upon completion
+- Multi-language support and mobile-friendly design
+- Video lessons, practical exercises, and assessments
 
 ### Agricultural Marketplace
 - List crops and products for sale
@@ -38,10 +38,10 @@ Agro Youth is a full-stack web application designed to empower young farmers and
 - Real-time availability status
 
 ### User Roles
-- **Farmers** - List products, share farming experiences
-- **Elders** - Share traditional knowledge and best practices
+- **Farmers** - List products, take courses, earn certificates
+- **Elders** - Share traditional knowledge through course content
 - **Buyers** - Browse and purchase agricultural products
-- **Admin** - Manage platform content and users
+- **Admin** - Manage platform content, courses, and users
 
 ## 🛠️ Technology Stack
 
@@ -225,31 +225,50 @@ Content-Type: application/json
 }
 ```
 
-### Knowledge Endpoints
+### Courses Endpoints
 
-#### Get All Knowledge Entries
+#### Get All Courses
 ```http
-GET /knowledge/
+GET /courses
 Query Parameters:
-  - crop_type: filter by crop
-  - region: filter by region
-  - season: filter by season
+  - category: filter by category
+  - level: filter by level
+  - language: filter by language
 ```
 
-#### Create Knowledge Entry
+#### Get Course Details
 ```http
-POST /knowledge/
+GET /courses/:courseId
+Authorization: Bearer <access_token>
+```
+
+#### Get My Courses (Enrollments)
+```http
+GET /my-courses
+Authorization: Bearer <access_token>
+```
+
+#### Enroll in Course
+```http
+POST /courses/:courseId/enroll
+Authorization: Bearer <access_token>
+```
+
+#### Update Progress
+```http
+PUT /enrollments/:enrollmentId/progress
 Authorization: Bearer <access_token>
 Content-Type: application/json
 
 {
-  "title": "Best Practices for Rice Farming",
-  "content": "Rice farming requires proper water management...",
-  "language": "English",
-  "crop_type": "Rice",
-  "season": "Rainy Season",
-  "region": "Monrovia"
+  "module_number": 1
 }
+```
+
+#### Generate Certificate
+```http
+POST /enrollments/:enrollmentId/certificate
+Authorization: Bearer <access_token>
 ```
 
 ### System Endpoints
@@ -299,17 +318,46 @@ Response:
 }
 ```
 
-#### knowledge_entries
+#### courses
 ```javascript
 {
   _id: ObjectId,
   title: String,
-  content: String,
+  description: String,
+  category: String,
+  level: String,
+  duration_hours: Number,
   language: String,
-  crop_type: String,
-  season: String,
-  region: String,
-  author_id: ObjectId,
+  modules: [
+    {
+      module_number: Number,
+      title: String,
+      content: String,
+      video_url: String,
+      duration_minutes: Number
+    }
+  ],
+  is_published: Boolean,
+  created_at: DateTime,
+  updated_at: DateTime
+}
+```
+
+#### enrollments
+```javascript
+{
+  _id: ObjectId,
+  user_id: ObjectId,
+  course_id: ObjectId,
+  enrollment_date: DateTime,
+  progress: [
+    {
+      module_number: Number,
+      completed_at: DateTime
+    }
+  ],
+  certificate_issued: Boolean,
+  certificate_id: String,
   created_at: DateTime,
   updated_at: DateTime
 }
@@ -384,7 +432,9 @@ Agro_youth-main/
 │   │   │   ├── Login.tsx
 │   │   │   ├── Register.tsx
 │   │   │   ├── Market.tsx
-│   │   │   └── Knowledge.tsx
+│   │   │   ├── Courses.tsx
+│   │   │   ├── CourseDetail.tsx
+│   │   │   └── Certificate.tsx
 │   │   ├── services/            # Business logic
 │   │   ├── types/               # TypeScript types
 │   │   ├── App.tsx              # Main app component

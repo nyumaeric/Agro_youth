@@ -69,7 +69,8 @@ def login():
         return jsonify({'message': 'Missing username or email'}), 400
     
     # Verify password
-    if not user or not check_password_hash(user['password_hash'], data['password']):
+    password_field = 'password_hash' if 'password_hash' in user else 'password'
+    if not user or not check_password_hash(user[password_field], data['password']):
         return jsonify({'message': 'Invalid credentials'}), 401
     
     # Create access token

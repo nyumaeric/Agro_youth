@@ -58,9 +58,9 @@ DATABASE_CONNECTIONS = Gauge(
     'Number of active database connections'
 )
 
-KNOWLEDGE_ENTRIES = Gauge(
-    'dagri_talk_knowledge_entries_total',
-    'Total number of knowledge entries'
+COURSES_COUNT = Gauge(
+    'dagri_talk_courses_total',
+    'Total number of courses'
 )
 
 MARKET_LISTINGS = Gauge(
